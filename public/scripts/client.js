@@ -63,12 +63,12 @@ $(function() {
   renderTweets(data);
   
   //Post new tweet
-  /*$(".new-tweet button").on("click", function() {
-    if ($(".new-tweet textarea")){
-      
-    }
+  $(document).on("submit", function(event) {
+    event.preventDefault();
     
-    const $tweet = createTweetElement(tweetData);
-  });*/
+    const newTweet = $("form").serialize();
+    
+    $.post("/tweets", newTweet);
+  });
 
 });
