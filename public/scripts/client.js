@@ -30,11 +30,17 @@ const data = [
     }
   ]
 
+const escapeText = function(text) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
+}
+
 const createTweetElement = function(tweetData) {
   const $tweet = $(`
     <article>
-      <header> ${tweetData.user.name} <span> ${tweetData.user.handle} </span></header>
-      <p> ${tweetData.content.text} </p>
+      <header> ${escapeText(tweetData.user.name)} <span> ${escapeText(tweetData.user.handle)} </span></header>
+      <p> ${escapeText(tweetData.content.text)} </p>
       <footer>
         <span> ${timeago.format(tweetData.created_at)} </span>
         <div>
