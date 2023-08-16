@@ -43,3 +43,16 @@ button {
   padding: 0.3em;
   border-style: none;
 }
+
+#error-display {
+  display: none;
+  background-color: #E84B4B;
+  color: black;
+  width: 100%;
+  border-color: red;
+  border-style: dotted;
+  border-width: 3px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}

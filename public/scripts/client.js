@@ -76,14 +76,20 @@ $(function() {
   $(document).on("submit", function(event) {
     event.preventDefault();
     
+    $("#error-display").slideUp("fast");
+    
     const newTweet = $("form").serialize();
     
     const tweetText = $("form textarea").val();
     
     if (tweetText.trim() === "" || tweetText.trim() === null) {
-      alert("Tweet is blank!");
+      $("#error-display").text("Tweet is blank!");
+      //$("#error-display").css("display", "block");
+      $("#error-display").slideDown("fast");
     } else if (tweetText.length > 140) { // TODO: Replace with variable
-      alert("Tweet is too long!");
+      $("#error-display").text("Tweet is too long!");
+      //$("#error-display").css("display", "block");
+      $("#error-display").slideDown("fast");
     } else {
       $.post("/tweets", newTweet, function() {
         $.get("/tweets", function(data, status) {      
