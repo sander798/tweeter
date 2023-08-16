@@ -72,7 +72,17 @@ $(function() {
     
     const newTweet = $("form").serialize();
     
-    $.post("/tweets", newTweet);
+    const tweetText = $("form textarea").val();
+    
+    //console.log("\"" + tweetText + "\" => \"" + tweetText.trim() + "\"");
+    
+    if (tweetText.trim() === "" || tweetText.trim() === null) {
+      alert("Tweet is blank!");
+    } else if (tweetText.length > 140) { // TODO: Replace with variable
+      alert("Tweet is too long!");
+    } else {
+      $.post("/tweets", newTweet);
+    }
   });
 
 });
