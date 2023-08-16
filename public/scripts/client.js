@@ -81,6 +81,7 @@ $(function() {
     } else {
       $.post("/tweets", newTweet, function() {
         $.get("/tweets", function(data, status) {      
+          $("#tweet-container").empty();
           renderTweets(data);
         });
       });
