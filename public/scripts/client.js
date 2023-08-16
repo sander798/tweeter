@@ -36,7 +36,7 @@ const createTweetElement = function(tweetData) {
       <header> ${tweetData.user.name} <span> ${tweetData.user.handle} </span></header>
       <p> ${tweetData.content.text} </p>
       <footer>
-        <span> ${tweetData.created_at} </span>
+        <span> ${timeago.format(tweetData.created_at)} </span>
         <div>
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -60,7 +60,11 @@ const renderTweets = function(tweetsArray) {
 $(function() {
   
   //Get and render existing tweets
-  renderTweets(data);
+  $(document).ready(function() {
+    $.get("/tweets", function(data, status) {      
+      renderTweets(data);
+    });
+  });
   
   //Post new tweet
   $(document).on("submit", function(event) {
