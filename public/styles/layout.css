@@ -28,15 +28,57 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  background-color: #ffe1a8;
+  width: 100vw;
+  background-color: #f2f2f2;
   color: black;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- 
-section {
-  width: 60%;
+
+/* Default style is for mobile devices */
+.new-tweet {
+  width: 90%;
 }
+ 
+/* Desktop Style */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  main {
+    background-color: #f2f2f2;
+  }
+  
+  #tweet-text {
+    background-color: #f2f2f2;
+  }
+  
+  nav {
+    background-color: #4056A1;
+  }
+  
+  #changeable-layout-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #page-header {
+    justify-content: flex-end;
+    margin-left: 2vw;
+    margin-top: 20vh;
+    margin-right: 8vw;
+    width: 30vw;
+    max-height: 45vh;
+    min-height: 400px;
+  }
+  
+  main {
+    margin-top: 20vh;
+    width: 60vw;
+  }
+}
+
