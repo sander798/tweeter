@@ -47,6 +47,10 @@ main {
   body {
     background-color: #f2f2f2;
   }
+    
+  nav {
+    background-color: #4056A1;
+  }
   
   main {
     background-color: #f2f2f2;
@@ -54,10 +58,6 @@ main {
   
   #tweet-text {
     background-color: #f2f2f2;
-  }
-  
-  nav {
-    background-color: #4056A1;
   }
   
   #changeable-layout-area {
