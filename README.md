@@ -1,8 +1,14 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter (X?) clone. 
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+There are no persistent user profiles, and no database stores the data, so new tweets are lost on server shutdown. Random profile names and handles are generated when a tweet is posted.
+
+The page has both a vertical layout intended for mobile devices and a landscape layout meant for desktops and tablets. The appropriate layout will be used automatically. 
+
+![Vertical Screenshot](mobileDemo.png)
+
+![Landscape Screenshot](desktopDemo.png)
 
 ## Getting Started
 
