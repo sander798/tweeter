@@ -2,6 +2,8 @@
 
 Tweeter is a simple, single-page Twitter (X?) clone. 
 
+You can write message of up to 140 characters in the field provided and "tweet" it with labels marking the time at which it was submitted relative to now, along with the poster's name and handle.
+
 There are no persistent user profiles, and no database stores the data, so new tweets are lost on server shutdown. Random profile names and handles are generated when a tweet is posted.
 
 The page has both a vertical layout intended for mobile devices and a landscape layout meant for desktops and tablets. The appropriate layout will be used automatically. 
