@@ -68,6 +68,7 @@ $(function() {
       $.post("/tweets", newTweet, function() {
         $.get("/tweets", function(data, status) {
           $("#tweet-container").empty();
+          $("#tweet-text").val("");
           renderTweets(data);
         });
       });
