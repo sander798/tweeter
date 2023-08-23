@@ -13,13 +13,15 @@ nav {
   font-family: Bungee, sans-serif;
   padding-left: 1.5em;
   font-size: 35px;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
 }
 
 #nav-write {
   display: flex;
   flex-direction: column;
   padding-right: 1.5em;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
   align-items: center;
 }
