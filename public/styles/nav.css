@@ -25,3 +25,7 @@ nav {
   padding-top: 1.5em;
   align-items: center;
 }
+
+#nav-write i {
+  color: #ff1f1f;
+}
