@@ -39,7 +39,7 @@ main {
 
 /* Default style is for mobile devices */
 .new-tweet {
-  width: 90%;
+  width: 90%; /*Because setting main to 90% adds white bars on the sides of the page*/
 }
  
 /* Desktop Style */
