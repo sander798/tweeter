@@ -68,7 +68,10 @@ $(function() {
       $.post("/tweets", newTweet, function() {
         $.get("/tweets", function(data, status) {
           $("#tweet-container").empty();
-          $("#tweet-text").val("");
+          
+          $("#tweet-text").val("");//Clear input text
+          $(".counter").val(140 - $("#tweet-text").text().length);
+          
           renderTweets(data);
         });
       });
